@@ -1,10 +1,15 @@
-from flask import Flask, jsonify, url_for
+from flask import Flask
+
 from flask import request
 from markupsafe import escape
+from flask import url_for
 app  = Flask(__name__)
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return f"""
+    <h1>Welcome to my flask App, this is the home page</h1>  <img src={url_for('static', filename='download.jpg')} alt='hello' >
+    """
+   
 
 
 
